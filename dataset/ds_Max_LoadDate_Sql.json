@@ -1,0 +1,40 @@
+{
+	"name": "ds_Max_LoadDate_Sql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "TxnID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "TxnDT",
+				"type": "date"
+			},
+			{
+				"name": "TxnAmount",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ProductCD",
+				"type": "varchar"
+			},
+			{
+				"name": "ProductQty",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "SourceTable"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
